@@ -1,8 +1,14 @@
 body {
-	font-family: Arial, sans-serif;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
 	padding: 0;
 	margin: 0;
-	color: #222222;
+}
+
+.header {
+	background: #333;
+	margin: 0;
+	padding: 0;
 }
 
 .clearfix:after {
@@ -12,68 +18,160 @@ body {
 	clear: both;
 }
 
-div {
+div, p, a, img, form, button {
 	box-sizing: border-box;
 }
 
-header {
-	background: url(../img/first-bg.jpg) no-repeat center top / cover;
-	padding-bottom: 160px;
+h1, h2. h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
 }
 
 .container {
 	width: 930px;
 	margin: 0 auto;
-
 }
 
-.logo {
-	margin-top: 41px;
-	float: left;
-}
-
-nav {
-	float: right;
-	margin-top: 50px;
+.nav {
+	display: flex;
+	align-items: center;
+	padding-top:  42px;
 }
 
 .menu {
-	padding: 0;
-	margin:0;
-	display: block;
+	display: flex;
+	margin-left: 180px;
+
 }
 
 .menu li {
+	font-size: 12px;
+	margin-right: 25px;
 	float: left;
 	display: block;
 	margin-right: 41px;
 }
+
 .menu li a {
 	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
+	font-size: 12px;
+	padding: 12px 0; 
+}
+
+.menu li.active a {
+	color: yellow;
+	border-top: 1px solid yellow;
+	border-bottom: 1px solid yellow;
+	text-shadow: #FC0 1px 0 10px;
+}
+
+.menu li a:hover{
+	color: yellow;
+	border-top: 1px solid yellow;
+	border-bottom: 1px solid yellow;
+	text-shadow: #FC0 1px 0 10px;
+	transition: all 2s ease;
+}
+.logo {
+	padding: 0;
+	margin: 0;
+	height: 50px;
+}
+
+.logosite {
+	float: left;
+}
+
+.e-mail {
+	text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+	font-size: 50px;
+	margin-left: auto;
+	color: #fff;
+	letter-spacing: -2px;
+ }
+
+ .e-mail a {
+ 	color: #fff;
+ 	font-weight: 200;
+ }
+
+ .e-mail a:hover{
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: -2px;
+  font-weight: 200;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+
+
+
+
+.offer {
+	margin-top: 178px;
+}
+
+.offer-content h1 {
+	font-size: 37px;
+	font-weight: 900;
+	padding-top: 11px;
+	margin-left: 20px;
+	transition: all 0.8s ease;
+	text-align: center;
+}
+
+.offer-content p {
+	font-size: 16px;
+	font-weight: 200;
+	text-transform: uppercase;
+	text-shadow: #FC0 1px 0 10px;
+	margin-top: 14px;
+	margin-left: 20px;
+	transition: all 0.5s ease;
+}
+
+.offer-content a {
+	background: #f4df42;
+	color: #000;
+	font-weight: 900;
 	font-size: 14px;
-}
-
-.titles_first {
-	font-size: 40px;
-	color: #fff;
-	text-transform: uppercase;
-	text-align: center;
-	margin-top: 180px;
-}
-
-h1 {
-	font-size: 75px;
-	color: #fff;
-	text-transform: uppercase;
-	text-align: center;
-	margin: 15px;
-}
-
-.button {
-	background: #fed136;
-	color: #484543;
+	width: 218px;
 	text-decoration: none;
 	text-transform: uppercase;
 	border-radius: 3px;
@@ -84,29 +182,41 @@ h1 {
 	text-align: center;
 	font-weight: bold;
 	font-size: 18px;
-	margin-top: 50px;
+	margin-top: 100px;
+	transition: none;
 }
 
-.title {
-	padding-top: 115px;
-}
-
-.title h2 {
-	font-size: 40px;
-	font-weight: bold;
-	text-align: center;
+.offer-content a:hover {
+	background: #f4b541;
+	color: #000;
+	font-weight: 900;
+	font-size: 18px;
+	width: 218px;
+	text-decoration: none;
 	text-transform: uppercase;
-	margin: 0;
-}
-.title p {
-	color:#777777;
+	border-radius: 3px;
+	display: block;
+	width: 240px;
+	padding: 20px 0;
+	margin: 0 auto;
 	text-align: center;
-	font-size: 16px;
-	margin-top: 5px;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 110px;
+	transition: all 0.7s ease;
+}
+
+.background {
+	background: url('../img/Header.png') no-repeat center;
+	width:768px;
+	height: 558px;
+	margin-left: 60px;
+	margin-bottom: 75px;
 }
 
 .services {
 	margin-top: 50px;
+	background: #fff;
 }
 
 .services_item {
@@ -114,19 +224,30 @@ h1 {
 	float: left;
 	text-align: center;
 }
+
+.title h2 {
+	text-align: center;
+	color: #333;
+}
+
+.title p {
+	text-align: center;
+	color: #333;
+}
 .services_item h3 {
 	font-size: 18px;
 	margin-bottom: 5px;
+	color: #333;
 }
 
 .services_item p {
 	font-size: 14px;
-	color: #777777;
+	color: #333;
 	line-height: 1.55em;
 }
 
 .services_item:last-child {
-	float: right;
+	float: right;	
 }
 
 .services_item:nth-child(2) {
@@ -135,10 +256,24 @@ h1 {
 
 #services {
 	padding-bottom: 120px;
+	margin-bottom: 120px;
+}
+
+.services_item img:hover{
+	transition: all 3s ease;
+	width: 75px;
+	height: 75px;
+	padding-left: 13px;
+	padding-right: 13px;
 }
 
 #portfolio {
 	background: #f7f7f7;
+}
+
+.title_portfolio h2 {
+	padding-top: 25px;
+	color: #333;
 }
 
 .works {
@@ -156,12 +291,4 @@ h1 {
 
 .works img:last-child {
 	float: right;
-}
-
-.Up:nth-child(1) {
-	text-transform: uppercase;
-	float: left;
-}
-.july_2010 h3 {
-	float: left;
 }
